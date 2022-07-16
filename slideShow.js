@@ -17,7 +17,7 @@ const { el, img, injectImage } = {
                 if (count >= img.length) {
                     return el.innerHTML = `<img src="${img[count-=count] }"  >`    
                 }
-               return el.innerHTML = `<img src="${img[count]}" >`
+               el.innerHTML = `<img src="${img[count]}" >`
             }
         }) 
 
