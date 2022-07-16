@@ -10,12 +10,12 @@ const { el, img, injectImage } = {
     img: images,
     
     injectImage(count) {
-        return el.innerHTML = `<img src="${img[0]}" >` // default
+        el.innerHTML = `<img src="${img[0]}" >` // default
         el.addEventListener('click', () => {
             count = count + 1
             for (var i = 1; i < img.length; i++) {
                 if (count >= img.length) {
-                    return el.innerHTML = `<img src="${img[count-=count] }"  >`    
+                    el.innerHTML = `<img src="${img[count-=count] }"  >`    
                 }
                el.innerHTML = `<img src="${img[count]}" >`
             }
